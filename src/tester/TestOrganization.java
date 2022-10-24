@@ -20,7 +20,7 @@ public class TestOrganization {
 				System.out.println(
 						"Enter your Choice :\n1. Hire Manager \n2. Hire Worker \n3. Display info of all Employees \n4. Update Salary \n10. Exit");
 				choice = sc.nextInt();
-				switch (choice) {
+			    try { switch (choice) {
 				case 1:
 					if (countEmp < limit) {
 						System.out.println("Enter the Details: ");
@@ -76,10 +76,17 @@ public class TestOrganization {
 					break;
 				}
 
-			} while (choice != 10);
+			
+			}
+		     catch(Exception e) {
+					System.out.println("You have Entered a Wrong Input !!! ");
 
 		}
+		
+		
 
-	}
+	}while (choice != 10);
 
+}
+}
 }
